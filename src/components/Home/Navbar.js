@@ -3,12 +3,13 @@ import { AiOutlineSearch } from 'react-icons/ai';
 import { BiUser } from 'react-icons/bi'
 import { MdOutlineFavoriteBorder } from 'react-icons/md'
 import { RiShoppingCartLine } from 'react-icons/ri'
+import { BsListNested } from 'react-icons/bs'
 
 const Navbar = () => {
     return (
-        <>
+        <div className='px-24'>
             {/* Tob bar with search input */}
-            <div className='flex px-24 pt-10 items-center'>
+            <div className='flex pt-10 items-center'>
                 <div>
                     <h1 className='text-primary text-3xl'>Dukan<span className='font-bold'>App</span></h1>
                 </div>
@@ -25,8 +26,26 @@ const Navbar = () => {
                     <RiShoppingCartLine />
                 </div>
             </div>
-
-        </>
+            {/* Navigation Manu */}
+            <nav>
+                <ul className='flex my-8 font-bold'>
+                    <p className='flex cursor-pointer pr-10 border-r-2'>
+                        <BsListNested className=' self-center' />
+                        <select id="Categories" className='bg-base-100 focus:outline-none'>
+                            <option value="volvo">Categories</option>
+                            <option value="saab">Categories</option>
+                            <option value="opel">Categories</option>
+                            <option value="audi">Categories</option>
+                        </select>
+                    </p>
+                    <li className='ml-10 cursor-pointer'>Home</li>
+                    <li className='ml-10 cursor-pointer'>Shop</li>
+                    <li className='ml-10 cursor-pointer'>About</li>
+                    <li className='ml-10 cursor-pointer'>Account</li>
+                    <li className='ml-10 cursor-pointer'>Contact</li>
+                </ul>
+            </nav>
+        </div>
     );
 };
 
